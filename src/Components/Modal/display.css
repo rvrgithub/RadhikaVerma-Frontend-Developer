@@ -1,0 +1,27 @@
+.displayContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    background-color: rgb(250, 248, 249);
+    width: 700px;
+    height: 70%;
+    z-index: 1000;
+    padding: 50px;
+    border-radius: 10px;
+    color: crimson;
+    font-weight: 900;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.overLay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+bottom: 0;
+z-index: 1000;
+}
+span{
+    color: brown;
+    font-weight: 500;
+}
