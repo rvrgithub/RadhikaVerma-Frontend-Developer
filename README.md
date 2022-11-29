@@ -2,7 +2,7 @@
 
 ## Steps...
 ### Installation 
- - npx create-react-app space_x
+ - npx create-react-app
  - reate-router-dom
  - axios
  - chakra ui
