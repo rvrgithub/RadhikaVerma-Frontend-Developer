@@ -6,7 +6,7 @@ const { registerUser, loginUser } = require("./src/Controller/controller");
 const app = express();
 app.use(express.json());
 app.post("/register", registerUser);
-app.post("./login", loginUser);
+app.post("/login", loginUser);
 
 
 // connection..
