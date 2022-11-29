@@ -11,8 +11,13 @@
  - React
  - Redux
 
-
-
+## Node js 
+  - express 
+  - mongoose
+  - bcryptjs
+  - validator
+  - jsonwebtoken
+  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
