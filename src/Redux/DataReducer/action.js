@@ -3,9 +3,9 @@ import axios from "axios";
 
 
 export const getCapsulesData =(params)=>(dispatch)=>{
-    // console.log("blogparams",params)
+    console.log("blogparams",params)
     dispatch({type:types.GET_DATA_REQUEST});
-return axios.get("https://api.spacexdata.com/v3/capsules",params)
+return axios.get(`https://api.spacexdata.com/v3/capsules?_page=${params}&_limit=${6}`,params)
 .then((res)=>{
     dispatch({type:types.GET_DATA_SUCCESS,payload:res.data})
 })

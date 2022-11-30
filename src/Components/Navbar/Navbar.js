@@ -65,6 +65,7 @@ export const NavBar = () => {
 //Styled Components
 const Navbar = {
   Wrapper: styled.nav`
+    display: flex;
     position: fixed;
     z-index: 2;
     flex: 1;
@@ -74,13 +75,11 @@ const Navbar = {
     width: 100%;
     margin: 0 auto;
     margin-top: 0%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
     background-color: black;
     box-shadow: 0 0.75rem 0.5rem -0.5rem rgba(0, 0, 0, 0.2);
-    /* margin-bottom: 500px; */
     //40em == 640px
     @media only screen and (max-width: 40em) {
       position: fixed;
@@ -105,13 +104,14 @@ const Navbar = {
       position: fixed;
       right: 0;
       top: 0;
-      color: black;
+      color: red;
       font-size: 800;
-      height: 100%;
+      height: 50%;
 
       flex-direction: column;
 
       background-color: #ffffff;
+
       padding: 1rem 2rem;
 
       transition: 0.2s ease-out;
@@ -125,10 +125,12 @@ const Navbar = {
     position: relative;
     top: 5px;
     padding: 0 1rem;
+
     cursor: pointer;
 
     @media only screen and (max-width: 40em) {
       padding: 1rem 0;
+
     }
   `,
 };
@@ -142,7 +144,6 @@ const HamburgerButton = {
     color: black;
     font-size: 800;
     display: none;
-
     @media only screen and (max-width: 40em) {
       display: block;
     }
@@ -154,7 +155,8 @@ const HamburgerButton = {
     color: black;
     font-size: 800;
     cursor: pointer;
-
+    height: 34px;
+    background-color: white;
     &:after {
       content: "";
       display: block;
@@ -180,8 +182,8 @@ const HamburgerButton = {
       width: 100%;
       background-color: #000000;
       position: absolute;
+       height: 10px;
     }
-
     &:after {
       top: -0.8rem;
     }

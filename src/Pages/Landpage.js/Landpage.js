@@ -1,10 +1,8 @@
 import { Box, Button, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import "./land.css";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { getRocketData } from "../../Redux/DataReducer/action";
 
 export const Landpage = () => {

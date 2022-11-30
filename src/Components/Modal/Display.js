@@ -1,7 +1,7 @@
 import React from 'react'
 import "./display.css"
 export const Display = ({open,onClose,data}) => {
-  console.log("displaydata",data)
+  // console.log("displaydata",data)
   if(!open) return null
   return (
 <>
