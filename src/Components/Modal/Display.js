@@ -39,7 +39,7 @@ export const Display = ({open,onClose,data}) => {
 <p>type
  :<span>{data.type
 }</span></p>
-   <button onClick={onClose}>close</button>
+   <button className='btn close' onClick={onClose}>close</button>
     </div>
 </>
   )

@@ -9,9 +9,12 @@
     z-index: 1000;
     padding: 50px;
     border-radius: 10px;
-    color: crimson;
-    font-weight: 900;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    color: rgb(149, 144, 144);
+    padding:50px;
+    font-weight: 700;
+    text-align: left;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-image: url("https://th-thumbnailer.cdn-si-edu.com/j2EFfThImc8HQ_Idhy-DrLG8g5s=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/c7/b9/c7b9e461-84fb-47b7-8d59-48442e20bb8a/34i_dj2019_spacexdragonart_live.jpg");
 }
 .overLay{
     position: fixed;
@@ -22,6 +25,13 @@ bottom: 0;
 z-index: 1000;
 }
 span{
-    color: brown;
+    color: rgb(251, 139, 139);
     font-weight: 500;
+    margin-left: 20px;
+}
+.close{
+   margin:10% 0 50% 0 ;
+   width: 300px;
+   height: 50px;
+
 }
