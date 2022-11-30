@@ -21,6 +21,8 @@ export const Capsules = () => {
   return (
     <>
     <SimpleGrid
+      position={"absolute"}
+        top="90px"
       columns={{ base: 1, md: 2, lg: 3 }}
       // marginTop= "500px"
       spacing={6} 
@@ -72,7 +74,9 @@ export const Capsules = () => {
       wrap="no-wrap"
       minH="70vh"
       px={8}
-      m={0}
+      position={"fixed"}
+        // top="140px"
+      mt={"60vh"}
     >
       <Button
           onClick={() => {

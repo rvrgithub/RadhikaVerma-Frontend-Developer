@@ -1,7 +1,7 @@
 import { Box, Button, Flex, FormLabel, Input, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { loginApi } from "../../Redux/Auth/action";
 import { USER_LOGIN_SUCCESS } from "../../Redux/Auth/action.type";
 export const Login = () => {
@@ -33,7 +33,7 @@ export const Login = () => {
       console.log("login payload", res.user_id);
 
       if (res === USER_LOGIN_SUCCESS) {
-        console.log("res",res)
+        console.log("res", res);
         localStorage.setItem("loginUser", JSON.stringify(token));
         alert("Login successful");
         navigate("/");
@@ -44,13 +44,16 @@ export const Login = () => {
     });
   };
   return (
-    <Box justify="center">
+    <Box justifyContent="center" textAlign={"center"}>
       <Flex
+        position={"absolute"}
+        top="140px"
         justify="center"
         align="center"
         direction="column"
         textAlign="center"
-        w={"32%"}
+        w={{sm:"80%", md:"50%" , lg:"32%"}}
+
         z-index={2}
         m={"auto"}
         padding="13px 20px"

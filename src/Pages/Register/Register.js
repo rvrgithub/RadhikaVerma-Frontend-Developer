@@ -24,13 +24,9 @@ export const Register = () => {
   // console.log("inputsData", inputData);
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      inputData.email &&
-      inputData.password &&
-      inputData.name
-    ) {
+    if (inputData.email && inputData.password && inputData.name) {
       dispatch(registerAPI(inputData))
-        .then((res) =>  console.log("resr",res.data))
+        .then((res) => console.log("resr", res.data))
         .catch((err) => console.log(err));
       alert("Registration Successfull");
       navigate("/login");
@@ -41,11 +37,13 @@ export const Register = () => {
   return (
     <Box justify="center">
       <Flex
+        position={"absolute"}
+        top="100px"
         justify="center"
         align="center"
         direction="column"
         textAlign="center"
-        w={"32%"}
+        w={{sm:"80%", md:"50%" , lg:"32%"}}
         m={"auto "}
         padding="13px 20px"
         h="500px"
@@ -56,7 +54,7 @@ export const Register = () => {
             Register
           </Text>
           <FormLabel m="15px 0 0 50px" htmlFor="text">
-             Name
+            Name
           </FormLabel>
           <Input
             h="50px"
@@ -67,7 +65,7 @@ export const Register = () => {
             onChange={(e) => handleInput(e)}
             placeholder="Enter Your Name"
           />
-          
+
           <FormLabel m="15px 0 0 50px" htmlFor="text">
             Email Id
           </FormLabel>
