@@ -12,73 +12,73 @@ export const Capsules = () => {
   const [value, setVlaue] = useState();
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
-  console.log("page",page)
+  console.log("page", page);
   useEffect(() => {
     dispatch(getCapsulesData(page));
-  }, [dispatch,page]);
+  }, [dispatch, page]);
 
-  console.log("data",data)
+  console.log("data", data);
   return (
     <>
-    <SimpleGrid
-      position={"absolute"}
+      <SimpleGrid
+        position={"absolute"}
         top="90px"
-      columns={{ base: 1, md: 2, lg: 3 }}
-      // marginTop= "500px"
-      spacing={6} 
-      m={0}
-    >
-      {data?.length > 0 &&
-        data.map((e) => (
-          <Box
-            key={e.id}
-            w="380px"
-            h="400px"
-            m={"auto"}
-            borderRadius="10px"
-            boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-          >
-            <Image
-              w="100%"
-              h="60%"
-              src="https://th-thumbnailer.cdn-si-edu.com/j2EFfThImc8HQ_Idhy-DrLG8g5s=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/c7/b9/c7b9e461-84fb-47b7-8d59-48442e20bb8a/34i_dj2019_spacexdragonart_live.jpg"
-              alt="error_image"
-            />
-            <p>{e.capsule_id}</p>
-            <p>{e.details}</p>
-            <p>{e.status}</p>
-            <Button
-              onClick={() => {
-                setIsOpen(true);
-                // console.log("id", e);
-                setVlaue(e);
-              }}
+        columns={{ base: 1, md: 2, lg: 3 }}
+        // marginTop= "500px"
+        spacing={6}
+        m={0}
+      >
+        {data?.length > 0 &&
+          data.map((e) => (
+            <Box
+              key={e.id}
+              w="380px"
+              h="400px"
+              m={"auto"}
+              borderRadius="10px"
+              boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
             >
-              Details
-            </Button>
-            <Display
-              data={value}
-              open={isOpen}
-              onClose={() => {
-                setIsOpen(false);
-              }}
-            />
-          </Box>
-        ))}   
-    </SimpleGrid>
-   
-    <Flex
-      align="center"
-      justify={{ base: "center", md: "space-around", xl: "space-between" }}
-      direction={{ base: "column-reverse", md: "row" }}
-      wrap="no-wrap"
-      minH="70vh"
-      px={8}
-      position={"fixed"}
+              <Image
+                w="100%"
+                h="60%"
+                src="https://th-thumbnailer.cdn-si-edu.com/j2EFfThImc8HQ_Idhy-DrLG8g5s=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/c7/b9/c7b9e461-84fb-47b7-8d59-48442e20bb8a/34i_dj2019_spacexdragonart_live.jpg"
+                alt="error_image"
+              />
+              <p>{e.capsule_id}</p>
+              <p>{e.details}</p>
+              <p>{e.status}</p>
+              <Button
+                onClick={() => {
+                  setIsOpen(true);
+                  // console.log("id", e);
+                  setVlaue(e);
+                }}
+              >
+                Details
+              </Button>
+              <Display
+                data={value}
+                open={isOpen}
+                onClose={() => {
+                  setIsOpen(false);
+                }}
+              />
+            </Box>
+          ))}
+      </SimpleGrid>
+
+      <Flex
+        align="center"
+        justify={{ base: "center", md: "space-around", xl: "space-between" }}
+        direction={{ base: "column-reverse", md: "row" }}
+        wrap="no-wrap"
+        minH="70vh"
+        px={8}
+        position={"fixed"}
         // top="140px"
-      mt={"60vh"}
-    >
-      <Button
+        mt={"60vh"}
+      >
+        <Button
           onClick={() => {
             setPage(page - 1);
           }}
@@ -93,7 +93,7 @@ export const Capsules = () => {
         >
           Next
         </Button>
-    </Flex>
+      </Flex>
     </>
   );
 };
